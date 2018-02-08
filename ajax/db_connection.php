@@ -1,16 +1,30 @@
 <?php
+/**
+ * @name: PHP-MySQL CRUD
+ * @description: Sample project of CRUD Operations with PPHP-MySQL, using jQuery and Bootstrap
+ * @version: 1.0
+ * @author: Dheymer Leon
+ *          Phone     : +593-98-7982998
+ *          Email     : dheymer@gmail.com
+ *          IG/TW     : @dheymer
+ *          Facebook  : @dheymerleonweb
+ *          Skype     : dheymer
+ *          LinkedIn  : linkedin.com/in/dheymer
+ *          DeviantArt: dheymer.deviantart.com
+ *          Website   : dheymer.000webhostapp.com
+ */
 
-// Connection variables 
-$host = "localhost"; // MySQL host name eg. localhost
-$user = "root"; // MySQL user. eg. root ( if your on localserver)
-$password = ""; // MySQL user password  (if password is not set for your root user then keep it empty )
-$database = "savorsys"; // MySQL Database name
+/**
+ * Connection variables 
+ */
+$host = "localhost";                                    // MySQL host name eg. localhost
+$user = "root";                                         // MySQL user. eg. root
+$password = "";                                         // MySQL user password 
+$database = "crud_test";                                 // MySQL Database name
 
-// Connect to MySQL Database
-$con = new mysqli($host, $user, $password, $database);
+$con = new mysqli($host, $user, $password, $database);  // Connect to MySQL Database
 
-// Check connection
-if ($con->connect_error) {
-    die("Connection failed: " . $con->connect_error);
+if ($con->connect_error) {                              // Check connection
+    die("Connection failed: " . $con->connect_error);   // If fails to connect, show the error
 }
 ?>

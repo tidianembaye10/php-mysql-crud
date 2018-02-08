@@ -1,8 +1,21 @@
 <?php
-	// include Database connection file 
-	include("db_connection.php");
+	/**
+ * @name: PHP-MySQL CRUD
+ * @description: Sample project of CRUD Operations with PPHP-MySQL, using jQuery and Bootstrap
+ * @version: 1.0
+ * @author: Dheymer Leon
+ *          Phone     : +593-98-7982998
+ *          Email     : dheymer@gmail.com
+ *          IG/TW     : @dheymer
+ *          Facebook  : @dheymerleonweb
+ *          Skype     : dheymer
+ *          LinkedIn  : linkedin.com/in/dheymer
+ *          DeviantArt: dheymer.deviantart.com
+ *          Website   : dheymer.000webhostapp.com
+ */
 
-	// Design initial table header 
+	include("db_connection.php");									// include Database connection file 
+																	// Design initial table header 
 	$data = '<table class="table table-bordered table-striped">
 						<tr>
 							<th>No.</th>
@@ -13,18 +26,16 @@
 							<th>Delete</th>
 						</tr>';
 
-	$query = "SELECT * FROM users";
+	$query = "SELECT * FROM users";									// Form the read query
 
-	if (!$result = mysqli_query($con, $query)) {
-        exit(mysqli_error($con));
+	if (!$result = mysqli_query($con, $query)) {					// If it couldn't excecute, closes the script
+        exit(mysqli_error($con));									// while showing the error
     }
 
-    // if query results contains rows then featch those rows 
-    if(mysqli_num_rows($result) > 0)
-    {
+    
+    if(mysqli_num_rows($result) > 0){								// if query results has rows then featch those rows
     	$number = 1;
-    	while($row = mysqli_fetch_assoc($result))
-    	{
+    	while($row = mysqli_fetch_assoc($result)){					// ...and format those rows in HTML table rows
     		$data .= '<tr>
 				<td>'.$number.'</td>
 				<td>'.$row['first_name'].'</td>
@@ -39,14 +50,11 @@
     		</tr>';
     		$number++;
     	}
-    }
-    else
-    {
-    	// records now found 
-    	$data .= '<tr><td colspan="6">Records not found!</td></tr>';
+    }else{															// If there's no records
+    	$data .= '<tr><td colspan="6">Records not found!</td></tr>';// show the records not found message
     }
 
-    $data .= '</table>';
+    $data .= '</table>';											// finish the HTML table
 
-    echo $data;
+    echo $data;														// Show the table
 ?>
