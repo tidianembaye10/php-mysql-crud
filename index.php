@@ -8,9 +8,9 @@
 	Phone: +593-98-7982998
 	Twitter/Instagram: @dheymer
 	Facebook: www.facebook.com/dheymerleonweb
-    Deviant Art: dheymer.deviantart.com 
-    http://dheymer.000webhostapp.com/
-    LinkedIn: www.linkedin.com/in/dheymer
+	Deviant Art: dheymer.deviantart.com 
+	http://dheymer.000webhostapp.com/
+	LinkedIn: www.linkedin.com/in/dheymer
 -->
 <head>
     <meta charset="UTF-8">
