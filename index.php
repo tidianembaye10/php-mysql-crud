@@ -24,7 +24,10 @@
 <!-- Content Section -->
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-2">
+            <img class="img-responsive" src="img/logo-dlw-md.png">
+        </div>
+        <div class="col-md-10" style="padding: 3rem;">
             <h1>Demo: PHP and MySQL CRUD Operations using Jquery and Bootstrap</h1>
         </div>
     </div>
