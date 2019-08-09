@@ -17,7 +17,7 @@
 /**
  * Connection variables 
  */
-$host = "localhost";                                    // MySQL host name eg. localhost
+$host = "database-1.ch6b8u1ydjud.us-east-1.rds.amazonaws.com";                                    // MySQL host name eg. localhost
 $user = "root";                                         // MySQL user. eg. root
 $password = "";                                         // MySQL user password 
 $database = "crud_test";                                 // MySQL Database name
